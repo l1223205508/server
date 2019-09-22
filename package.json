@@ -1,12 +1,20 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Git is a version control system.\r Git is free software.\r Git is good",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/l1223205508/server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/l1223205508/server/issues"
+  },
+  "homepage": "https://github.com/l1223205508/server#readme"
 }
