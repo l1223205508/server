@@ -4,6 +4,7 @@
   "description": "Git is a version control system.\r Git is free software.\r Git is good",
   "main": "index.js",
   "scripts": {
+    "serve":"nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
