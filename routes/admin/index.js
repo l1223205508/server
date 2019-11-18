@@ -42,9 +42,11 @@ module.exports = app => {
     if(req.modelName === 'Commodity'){
      let model = await req.Model.findById(req.params.id).select('file');
      let dir = path.resolve(__dirname,'../../uploads/');
-     let reg = /(\S*uploads\/)/g
+     console.log(dir)
+     let reg = /(\S*uploads)/g
      let result = model.file.replace(reg,dir)
      fs.unlink(result, () => {
+      // console.log(result)
       console.log('删除成功')
     })
    }
@@ -65,7 +67,6 @@ module.exports = app => {
       // __dirname + '/../../uploads'
       // cb(null, 'D:/Web/Project/server/uploads')
       let dir = path.resolve(__dirname,'../../uploads');
-      // console.log(dir)
       cb(null,dir)
     },
     filename:function(req,file,cb){
@@ -80,7 +81,6 @@ module.exports = app => {
     }
   })
   app.post('/admin/api/upload',upload.single('file'),(req,res) => {
-    // const model = await req.Model.find().setOptions(queryOptions);
     const file = req.file
     res.send(file)
   })
